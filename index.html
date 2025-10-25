@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio — Nama Anda</title>
+  <meta name="description" content="Portfolio pribadi — Nama Anda. Web developer, designer, dan pembuat produk." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --accent:#7c3aed; --muted:#9aa4b2; --glass: rgba(255,255,255,0.04);
+      --maxw:1100px; --radius:14px;
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    body{font-family:Inter,system-ui,Segoe UI,Roboto, 'Helvetica Neue', Arial; margin:0; background:linear-gradient(180deg,var(--bg) 0%, #071026 100%); color:#e6eef6; -webkit-font-smoothing:antialiased;}
+    .wrap{max-width:var(--maxw); margin:48px auto; padding:28px;}
+    header{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px}
+    .logo{display:flex;gap:12px;align-items:center}
+    .logo .mark{width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#06b6d4);display:flex;align-items:center;justify-content:center;font-weight:700;color:white}
+    nav a{color:var(--muted);text-decoration:none;margin:0 10px;font-weight:600}
+    .hero{display:grid;grid-template-columns:1fr 340px;gap:28px;align-items:center;margin-bottom:28px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:var(--radius); padding:22px; box-shadow: 0 6px 20px rgba(2,6,23,0.6);}
+    h1{font-size:34px;margin:0 0 10px}
+    p.lead{color:var(--muted);margin:0 0 18px}
+    .cta{display:flex;gap:12px}
+    .btn{padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700;display:inline-block}
+    .btn-primary{background:linear-gradient(90deg,var(--accent),#06b6d4);color:#041023}
+    .btn-ghost{border:1px solid rgba(255,255,255,0.06);color:var(--muted);background:transparent}
+
+    /* side profile */
+    .profile{display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px}
+    .avatar{width:160px;height:160px;border-radius:20px;background:linear-gradient(180deg,#122033,#0d1622);display:flex;align-items:center;justify-content:center;font-size:64px;color:rgba(255,255,255,0.9)}
+    .meta small{color:var(--muted)}
+
+    /* sections */
+    section{margin-bottom:22px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .project-card{display:flex;flex-direction:column;gap:12px}
+    .project-thumb{height:160px;border-radius:12px;background:linear-gradient(120deg,#0b1220,#072335);display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:700}
+    .tags{display:flex;flex-wrap:wrap;gap:8px}
+    .tag{padding:6px 8px;border-radius:8px;font-size:12px;background:var(--glass);color:var(--muted)}
+
+    footer{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:14px;padding-top:18px;border-top:1px solid rgba(255,255,255,0.03)}
+
+    /* responsive */
+    @media (max-width:900px){.hero{grid-template-columns:1fr;}.grid-3{grid-template-columns:repeat(2,1fr)}.wrap{padding:18px}}
+    @media (max-width:600px){.grid-3{grid-template-columns:1fr}.avatar{width:120px;height:120px;font-size:44px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">
+        <div class="mark">NH</div>
+        <div>
+          <div style="font-weight:800">Nama Anda</div>
+          <small style="color:var(--muted)">Web Developer • UI/UX • Open-source</small>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="card">
+          <h1>Halo — Saya Nama Anda.</h1>
+          <p class="lead">Saya membuat aplikasi web yang berguna, antarmuka yang indah, dan berkontribusi ke proyek open-source. Saat ini fokus pada JavaScript, PHP, dan desain sistem.</p>
+          <div class="cta">
+            <a class="btn btn-primary" href="#contact">Hire me</a>
+            <a class="btn btn-ghost" href="#projects">Lihat proyek</a>
+          </div>
+
+          <hr style="margin:18px 0;border:none;border-top:1px solid rgba(255,255,255,0.03)">
+
+          <div style="display:flex;gap:12px;flex-wrap:wrap">
+            <div style="min-width:180px">
+              <strong>Posisi</strong>
+              <div class="meta"><small class="muted">Front-end Developer</small></div>
+            </div>
+            <div style="min-width:180px">
+              <strong>Lokasi</strong>
+              <div class="meta"><small class="muted">Indonesia</small></div>
+            </div>
+            <div style="min-width:180px">
+              <strong>Email</strong>
+              <div class="meta"><small class="muted">email@domain.com</small></div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="card profile">
+          <div class="avatar">NA</div>
+          <div style="font-weight:700">Nama Anda</div>
+          <div class="meta"><small class="muted">Freelancer • Remote</small></div>
+          <div style="width:100%;display:flex;gap:8px;justify-content:center;margin-top:8px">
+            <a class="btn btn-ghost" href="#contact">Message</a>
+            <a class="btn btn-ghost" href="#">Resume</a>
+          </div>
+        </aside>
+      </section>
+
+      <section id="about">
+        <div class="card">
+          <h2>About</h2>
+          <p class="lead">Saya adalah pengembang web dengan pengalaman membangun produk dari awal sampai rilis. Saya menyukai clean code, performa, dan UX yang bermakna.</p>
+          <p style="color:var(--muted)">Jika Anda ingin bekerja sama, kirimkan pesan melalui formulir di bawah atau email langsung ke <strong>email@domain.com</strong>.</p>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2 style="margin-bottom:12px">Projects</h2>
+        <div class="grid-3">
+          <div class="card project-card">
+            <div class="project-thumb">Project A</div>
+            <div>
+              <strong>Project A — E-commerce UI</strong>
+              <p class="lead" style="margin-top:8px">Sistem toko online dengan cart, checkout, dan dashboard admin.</p>
+              <div class="tags" style="margin-top:8px">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">PHP</span>
+              </div>
+              <div style="margin-top:12px"><a class="btn btn-ghost" href="#">Lihat detail</a></div>
+            </div>
+          </div>
+
+          <div class="card project-card">
+            <div class="project-thumb">Project B</div>
+            <div>
+              <strong>Project B — Dashboard</strong>
+              <p class="lead" style="margin-top:8px">Dashboard analitik dengan chart dan filter realtime.</p>
+              <div class="tags" style="margin-top:8px">
+                <span class="tag">React</span>
+                <span class="tag">Node.js</span>
+              </div>
+              <div style="margin-top:12px"><a class="btn btn-ghost" href="#">Lihat detail</a></div>
+            </div>
+          </div>
+
+          <div class="card project-card">
+            <div class="project-thumb">Project C</div>
+            <div>
+              <strong>Project C — Personal Blog</strong>
+              <p class="lead" style="margin-top:8px">Blog statis dengan optimasi SEO dan performa.</p>
+              <div class="tags" style="margin-top:8px">
+                <span class="tag">Static</span>
+                <span class="tag">Netlify</span>
+              </div>
+              <div style="margin-top:12px"><a class="btn btn-ghost" href="#">Lihat detail</a></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills">
+        <div class="card">
+          <h2>Skills</h2>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:12px">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">React</span>
+            <span class="tag">PHP</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">Figma</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="card">
+          <h2>Contact</h2>
+          <p class="lead">Isi formulir ini atau klik email untuk mengirim pesan:</p>
+          <form id="contactForm" onsubmit="return handleSubmit(event)" style="display:grid;gap:10px;margin-top:8px">
+            <input id="name" placeholder="Nama" required style="padding:10px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:inherit">
+            <input id="email" type="email" placeholder="email@domain.com" required style="padding:10px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:inherit">
+            <textarea id="message" placeholder="Pesan Anda" rows="5" style="padding:10px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:inherit"></textarea>
+            <div style="display:flex;gap:8px">
+              <button class="btn btn-primary" type="submit">Kirim</button>
+              <button class="btn btn-ghost" type="reset">Reset</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div>© <span id="year"></span> Nama Anda — All rights reserved</div>
+      <div style="display:flex;gap:12px">
+        <a href="#">GitHub</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Twitter</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function handleSubmit(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      // default action: open mail client. Replace with AJAX endpoint if you have one.
+      const subject = encodeURIComponent('Contact from Portfolio — ' + name);
+      const body = encodeURIComponent(message + '\n\n— ' + name + ' (' + email + ')');
+      window.location.href = 'mailto:email@domain.com?subject=' + subject + '&body=' + body;
+    }
+  </script>
+</body>
+</html>
